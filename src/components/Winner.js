@@ -17,12 +17,16 @@ const data = [
 
 const Winner = () => {
   return (
-    <div className='bg-5E8OD7 '>
-        <h1>Jogo Bonito Gameweek Winners</h1>
+    <div className='bg-blue-600 '>
+        <h1>Jogo Bonito </h1>
         <div>
             {data.map(({gameweek,manager,image,points}, index) => {
                 return(
-                    <div className="mx-5 my-7"></div>
+                    <div className="mx-5 my-7 grid ">
+                        <div className="">{image}</div>
+                        <p className="text-italic ">{manager}</p>
+                        <p className="absolute right-1 ">{gameweek}({points})</p>
+                    </div>
                 )
             })}
         </div>
